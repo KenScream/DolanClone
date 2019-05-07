@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FlightActivity">
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/arrow_back"
+
+            />
+
+        <TextView
+            android:id="@+id/MyAccount"
+            android:layout_width="257dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="Search Flights"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flights"
+                android:textSize="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="0dp"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:srcCompat="@drawable/ic_flight_takeoff_gray"
+                                    android:layout_marginTop="30dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="250dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Origin"
+                                        android:textSize="14sp"
+                                        android:padding="5dp"
+                                        />
+
+                                    <Spinner
+                                        android:id="@+id/spinnerOry"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="41dp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:visibility="visible"
+                                android:background="#BABABA"
+                                android:layout_marginStart="50dp"
+                                android:layout_marginLeft="50dp" />
+
+                            <LinearLayout
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:srcCompat="@drawable/ic_flight_land_gray"
+                                    android:layout_marginTop="30dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="250dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Destination"
+                                        android:textSize="14sp"
+                                        android:padding="5dp"
+                                        />
+
+                                    <Spinner
+                                        android:id="@+id/spinnerDest"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="41dp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/import_export"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iconDate"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="30dp"
+                                app:srcCompat="@drawable/ic_date_range"
+                                android:onClick="showDatePicker"
+                                tools:ignore="OnClick" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Depature Date"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/setDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingTop="5dp"
+                                    android:text="select your date"
+                                    android:layout_marginLeft="4dp"
+                                    android:textSize="22sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:visibility="visible"
+                            android:background="#BABABA"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginLeft="10dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="30dp"
+                                app:srcCompat="@drawable/ic_people" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Maskapai"
+                                    android:textSize="14sp" />
+
+                                <Spinner
+                                    android:id="@+id/spinnerMas"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="41dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:visibility="visible"
+                            android:background="#BABABA"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginLeft="10dp" />
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="30dp"
+                            app:srcCompat="@drawable/airline_seat" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Seat Class"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5dp"
+                                android:layout_marginLeft="4dp"
+                                android:hint="Economy"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:background="#BABABA"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="10dp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:background="#BABABA"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MORE OPTION"
+                        android:padding="16dp"
+                        android:layout_marginTop="60dp"
+                        android:paddingLeft="20dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:background="#BABABA"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="30dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:text="Ticket Flexibility"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="5dp"
+                                android:hint="Regular"
+                                android:layout_marginLeft="4dp"
+                                android:textSize="22sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:background="#BABABA"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="10dp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Search"
+                    android:background="#FFA500"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </android.support.v7.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_flight_takeoff_gray"
+                            android:layout_marginTop="30dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Origin"
+                                android:textSize="14sp"
+                                android:padding="5dp"
+                                />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Bandung(BDG)"
+                                android:layout_marginLeft="4dp"
+                                android:textSize="22sp"
+                                android:paddingTop="5dp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:visibility="visible"
+                        android:background="#BABABA"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginLeft="50dp" />
+
+                    <LinearLayout
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_flight_land_gray"
+                            android:layout_marginTop="30dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:text="Destination"
+                                android:textSize="14sp"
+                                android:padding="5dp"
+                                />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Singaphore(SG)"
+                                android:layout_marginLeft="4dp"
+                                android:textSize="22sp"
+                                android:paddingTop="5dp"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/reverse"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/import_export"
+                    />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="visible"
+                android:background="#BABABA"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/ic_date_range"
+                        android:onClick="showDatePicker"
+                        tools:ignore="OnClick" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Depature Date"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:text="select your date"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/ic_people" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Passenger"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:hint="2 Adult"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        app:srcCompat="@drawable/airline_seat" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Seat Class"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:layout_marginLeft="4dp"
+                            android:hint="Economy"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MORE OPTION"
+                    android:padding="16dp"
+                    android:layout_marginTop="60dp"
+                    android:paddingLeft="20dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="30dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Ticket Flexibility"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:hint="Regular"
+                            android:layout_marginLeft="4dp"
+                            android:textSize="22sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="visible"
+                    android:background="#BABABA"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Search"
+                android:background="#FFA500"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:layout_margin="1dp"
+            >
+
+            <TextView
+                android:id="@+id/logoDolan"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:text="Dolan.com"
+                android:textColor="#ffffff"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@drawable/logo"/>
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toEndOf="@+id/logoDolan"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintStart_toStartOf="@+id/logoDolan"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="211dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="13dp"
+                android:layout_toEndOf="@+id/logoDolan"
+                android:src="@drawable/ic_more_vert_black_24dp"
+
+                tools:ignore="MissingConstraints" />
+
+        </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text_View"
+                        android:layout_width="242dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Log In or Register"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="250dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Enjoy your Traveloka member benefits!"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView2"
+                        app:layout_constraintTop_toBottomOf="@+id/text_View" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_account_circle_black_24dp" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/TextPromo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="Ongoing Promo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </android.support.constraint.ConstraintLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="89dp"
+                    android:background="#000000"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="136dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <!--suppress AndroidMissingOnClickHandler -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="flightonclick"
+                            android:orientation="vertical"
+                            tools:ignore="OnClick">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_flight_black_24dp"
+                                tools:ignore="MissingConstraints,OnClick" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=" Flights"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="busonclick"
+                            android:orientation="vertical"
+                            >
+
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                app:srcCompat="@drawable/ic_directions_bus_black_24dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Bus"
+                                android:textColor="#FFFFFF" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="trainonclick"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_train_black_24dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+
+                                android:text="Trains"
+                                android:textColor="#FFFFFF"
+                                app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+                                app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="hotelonclick"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/carrental"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteY="8dp" />
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Hotel"
+                                android:textColor="#FFFFFF" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:onClick="restonclick"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/restoran"
+                                android:layout_width="90dp"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/ic_restaurant_black_24dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Restaurant"
+                                android:textColor="#ffff" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="90dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="8dp"
+                            app:srcCompat="@drawable/ic_apps_black_24dp"
+                            tools:ignore="MissingConstraints"
+                            tools:layout_editor_absoluteX="180dp"
+                            tools:layout_editor_absoluteY="89dp" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            tools:ignore="ExtraText">
+
+                            <ImageView
+                                android:id="@+id/flight_land"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_flight_land_black_24dp" />
+
+                            <ImageView
+                                android:id="@+id/comment"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_insert_comment" />
+
+                            <ImageView
+                                android:id="@+id/Cameras"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_linked_camera" />
+
+                            <ImageView
+                                android:id="@+id/movies"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_movie" />
+
+                            <ImageView
+                                android:id="@+id/payment"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_payment" />
+
+                            <ImageView
+                                android:id="@+id/top_up_data"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_signal_cellular" />
+
+                            <ImageView
+                                android:id="@+id/alert_prince"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_add_alert_black_24dp" />
+
+                            <ImageView
+                                android:id="@+id/phones_data"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_info_phone" />
+
+                            <ImageView
+                                android:id="@+id/cupon_id"
+                                android:layout_width="50dp"
+                                android:layout_height="28dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="5dp"
+                                app:srcCompat="@drawable/ic_card_giftcard" />
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="Ongoing Promos"
+                            android:textSize="26dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="26dp"
+                            app:srcCompat="@drawable/ic_chevron_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="1" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="2" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="3" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="4" />
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="1" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="2" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="3" />
+
+                            <Button
+                                android:layout_width="200dp"
+                                android:layout_height="150dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:text="4" />
+
+                        </LinearLayout>
+
+
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_margin="2dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/text_View"-->
+        <!--android:layout_width="242dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="Log In or Register"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imageView2"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/text2"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text="Enjoy your Traveloka member benefits!"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imageView2"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/text_View" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imageView2"-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_marginStart="24dp"-->
+        <!--android:layout_marginLeft="24dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@drawable/ic_account_circle_black_24dp" />-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="1dp">-->
+        <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="2dp">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/TextPromo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:text="Ongoing Promo"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:ignore="MissingConstraints" />-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+
+    </android.support.v7.widget.CardView>-->
+
+
+</LinearLayout>

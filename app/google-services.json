@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "216531261590",
+    "firebase_url": "https://dolandatabase1.firebaseio.com",
+    "project_id": "dolandatabase1",
+    "storage_bucket": "dolandatabase1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216531261590:android:56d92d61955c4fd5",
+        "android_client_info": {
+          "package_name": "com.project.dolanaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216531261590-mb1iu4547v754amnfkr6vm8sdfooam07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpFVvesKTTy5dsrl8BMurizjkF2-s0UpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216531261590-mb1iu4547v754amnfkr6vm8sdfooam07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

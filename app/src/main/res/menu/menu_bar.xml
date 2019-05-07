@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_id"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/mybooking_id"
+        android:title="MyBooking"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        />
+    <item
+        android:id="@+id/mymessage_id"
+        android:title="MyMessage"
+        android:icon="@drawable/ic_my_message"
+        />
+    <item
+        android:id="@+id/myprofile_id"
+        android:title="MyProfile"
+        android:icon="@drawable/ic_account_box"
+        />
+
+</menu>
